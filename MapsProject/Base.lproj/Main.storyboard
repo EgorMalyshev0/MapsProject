@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6nR-da-FFT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="b05-Lh-Pyl">
+            <objects>
+                <tabBarController id="6nR-da-FFT" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LRM-wx-8bv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="RtI-ps-IOP"/>
+                        <segue destination="anj-f8-EkC" kind="relationship" relationship="viewControllers" id="Rgm-sa-DZb"/>
+                        <segue destination="ksb-dt-zQz" kind="relationship" relationship="viewControllers" id="0wK-md-kAp"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="my9-KT-rTb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1570" y="-42"/>
+        </scene>
+        <!--Apple Map View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AppleMapViewController" customModule="MapsProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mr2-hO-u0c">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8cL-yO-Kwf">
+                                <rect key="frame" x="10" y="378" width="40" height="140"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91A-l1-4w4">
+                                        <rect key="frame" x="0.0" y="1" width="40" height="37.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="BkT-LV-2eH"/>
+                                            <constraint firstAttribute="width" secondItem="91A-l1-4w4" secondAttribute="height" multiplier="1:1" id="iuH-Te-ONG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" backgroundImage="plus.app.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="zoomIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CSr-JA-Yyj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2H-SX-kH1">
+                                        <rect key="frame" x="0.0" y="51" width="40" height="37.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="bri-Jw-zcy"/>
+                                            <constraint firstAttribute="width" secondItem="T2H-SX-kH1" secondAttribute="height" multiplier="1:1" id="qSf-NR-eV9"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" backgroundImage="minus.square.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="zoomOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Jv-O4-oEG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUC-mP-RyC">
+                                        <rect key="frame" x="0.0" y="102.5" width="40" height="35.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="kUC-mP-RyC" secondAttribute="height" multiplier="1:1" id="7BY-RZ-Nwh"/>
+                                            <constraint firstAttribute="width" constant="40" id="yWK-k0-kkk"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <imageReference key="backgroundImage" image="location" catalog="system" symbolScale="small"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="centerOnUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="br2-0b-uxJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Mr2-hO-u0c" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="AD6-60-9E5"/>
+                            <constraint firstItem="8cL-yO-Kwf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Cj0-xR-01l"/>
+                            <constraint firstItem="Mr2-hO-u0c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KpU-Kt-KVW"/>
+                            <constraint firstAttribute="bottom" secondItem="Mr2-hO-u0c" secondAttribute="bottom" id="MZc-Kw-ljf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mr2-hO-u0c" secondAttribute="trailing" id="NI9-er-fhO"/>
+                            <constraint firstItem="8cL-yO-Kwf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="c2y-d9-xZV"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="applelogo" catalog="system" id="gzG-Eh-AsP"/>
+                    <connections>
+                        <outlet property="mapView" destination="Mr2-hO-u0c" id="NSL-as-jwK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-430" y="-716"/>
+        </scene>
+        <!--Google-->
+        <scene sceneID="DKc-bU-uPs">
+            <objects>
+                <viewController id="anj-f8-EkC" customClass="GoogleMapViewController" customModule="MapsProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LWS-5F-99R">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D98-iU-dW7" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lzT-bO-zOL">
+                                <rect key="frame" x="10" y="403" width="40" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tE8-5Q-WCA">
+                                        <rect key="frame" x="0.0" y="1" width="40" height="37.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="3aV-vv-uZR"/>
+                                            <constraint firstAttribute="width" secondItem="tE8-5Q-WCA" secondAttribute="height" multiplier="1:1" id="6JT-sA-fAO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" backgroundImage="plus.app.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="zoomIn:" destination="anj-f8-EkC" eventType="touchUpInside" id="HRf-z4-bSv"/>
+                                            <action selector="zoomIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PoB-hr-kXJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRW-Ao-VuY">
+                                        <rect key="frame" x="0.0" y="51" width="40" height="37.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="WRW-Ao-VuY" secondAttribute="height" multiplier="1:1" id="8yb-9A-DqE"/>
+                                            <constraint firstAttribute="width" constant="40" id="lG8-hy-n7G"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" backgroundImage="minus.square.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="zoomOut:" destination="anj-f8-EkC" eventType="touchUpInside" id="J3L-Um-1vQ"/>
+                                            <action selector="zoomOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lpb-ot-Izw"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gqu-ZO-kUE">
+                                        <rect key="frame" x="0.0" y="92.5" width="40" height="35.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="OrR-ly-l1P"/>
+                                            <constraint firstAttribute="width" secondItem="Gqu-ZO-kUE" secondAttribute="height" multiplier="1:1" id="ZAG-5O-uTD"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <imageReference key="backgroundImage" image="location" catalog="system" symbolScale="small"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="centerOnUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IaZ-rO-ljD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="neN-2n-ueH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="D98-iU-dW7" firstAttribute="leading" secondItem="LWS-5F-99R" secondAttribute="leading" id="9YP-Nh-eRQ"/>
+                            <constraint firstItem="lzT-bO-zOL" firstAttribute="centerY" secondItem="LWS-5F-99R" secondAttribute="centerY" id="TDI-4G-gGm"/>
+                            <constraint firstItem="lzT-bO-zOL" firstAttribute="leading" secondItem="neN-2n-ueH" secondAttribute="leading" constant="10" id="YAR-SQ-aHY"/>
+                            <constraint firstItem="D98-iU-dW7" firstAttribute="top" secondItem="LWS-5F-99R" secondAttribute="top" id="did-ZK-vUO"/>
+                            <constraint firstItem="neN-2n-ueH" firstAttribute="trailing" secondItem="D98-iU-dW7" secondAttribute="trailing" id="jZc-XG-2FU"/>
+                            <constraint firstAttribute="bottom" secondItem="D98-iU-dW7" secondAttribute="bottom" id="wy5-oP-FIq"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Google" image="g.circle" catalog="system" id="2OG-Pa-fqa"/>
+                    <connections>
+                        <outlet property="mapView" destination="D98-iU-dW7" id="zkR-5Y-spt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Qe-jh-gQq" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-430" y="-42"/>
+        </scene>
+        <!--Yandex-->
+        <scene sceneID="PDE-sj-7dV">
+            <objects>
+                <viewController id="ksb-dt-zQz" customClass="YandexMapViewController" customModule="MapsProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Lt-of-zSf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8q5-tE-fK0" customClass="YMKMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BAg-ii-Q8o">
+                                <rect key="frame" x="10" y="378" width="40" height="140"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdy-4T-MBX">
+                                        <rect key="frame" x="0.0" y="1" width="40" height="37.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="JOb-Uz-hbx"/>
+                                            <constraint firstAttribute="width" secondItem="qdy-4T-MBX" secondAttribute="height" multiplier="1:1" id="PwA-5M-yDK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" backgroundImage="plus.app.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="zoomIn:" destination="ksb-dt-zQz" eventType="touchUpInside" id="10V-5y-T3y"/>
+                                            <action selector="zoomIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CzX-Fc-Jhq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRQ-D1-evE">
+                                        <rect key="frame" x="0.0" y="51" width="40" height="37.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="xh0-vN-Yin"/>
+                                            <constraint firstAttribute="width" secondItem="TRQ-D1-evE" secondAttribute="height" multiplier="1:1" id="yQ6-Wg-zGg"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" backgroundImage="minus.square.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="zoomOut:" destination="ksb-dt-zQz" eventType="touchUpInside" id="EaJ-vn-DLX"/>
+                                            <action selector="zoomOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UJs-YU-FDm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzG-mC-XHw">
+                                        <rect key="frame" x="0.0" y="102.5" width="40" height="35.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="DRL-iS-yFz"/>
+                                            <constraint firstAttribute="width" secondItem="TzG-mC-XHw" secondAttribute="height" multiplier="1:1" id="ade-AJ-FiU"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <imageReference key="backgroundImage" image="location" catalog="system" symbolScale="small"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="centerOnUser:" destination="ksb-dt-zQz" eventType="touchUpInside" id="dPl-nO-5xC"/>
+                                            <action selector="centerOnUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vch-Xe-RcD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Qd1-jr-L6e"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8q5-tE-fK0" firstAttribute="top" secondItem="0Lt-of-zSf" secondAttribute="top" id="3GQ-sB-1tL"/>
+                            <constraint firstItem="Qd1-jr-L6e" firstAttribute="trailing" secondItem="8q5-tE-fK0" secondAttribute="trailing" id="G2E-gm-r1F"/>
+                            <constraint firstItem="8q5-tE-fK0" firstAttribute="leading" secondItem="0Lt-of-zSf" secondAttribute="leading" id="T0Q-Kq-ncC"/>
+                            <constraint firstItem="BAg-ii-Q8o" firstAttribute="leading" secondItem="Qd1-jr-L6e" secondAttribute="leading" constant="10" id="dOk-Dr-YZv"/>
+                            <constraint firstItem="BAg-ii-Q8o" firstAttribute="centerY" secondItem="0Lt-of-zSf" secondAttribute="centerY" id="gFa-ww-Pgd"/>
+                            <constraint firstAttribute="bottom" secondItem="8q5-tE-fK0" secondAttribute="bottom" id="iYF-8S-tQr"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Yandex" image="y.circle" catalog="system" id="rvR-wX-6nK"/>
+                    <connections>
+                        <outlet property="mapView" destination="8q5-tE-fK0" id="LSB-Sf-wXW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="os7-sG-qev" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-430" y="642"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="applelogo" catalog="system" width="128" height="121"/>
+        <image name="g.circle" catalog="system" width="128" height="121"/>
+        <image name="location" catalog="system" width="128" height="121"/>
+        <image name="minus.square.fill" catalog="system" width="128" height="114"/>
+        <image name="plus.app.fill" catalog="system" width="128" height="114"/>
+        <image name="y.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

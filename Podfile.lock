@@ -1,0 +1,28 @@
+PODS:
+  - GoogleMaps (4.0.0):
+    - GoogleMaps/Maps (= 4.0.0)
+  - GoogleMaps/Base (4.0.0)
+  - GoogleMaps/Maps (4.0.0):
+    - GoogleMaps/Base
+  - YandexMapKit (3.5.0):
+    - YandexRuntime (= 3.5.0)
+  - YandexRuntime (3.5.0)
+
+DEPENDENCIES:
+  - GoogleMaps
+  - YandexMapKit (= 3.5)
+
+SPEC REPOS:
+  trunk:
+    - GoogleMaps
+    - YandexMapKit
+    - YandexRuntime
+
+SPEC CHECKSUMS:
+  GoogleMaps: b7f7fc569a9b354a3af0d9729dbec40957b7d41e
+  YandexMapKit: ecd4b78de34a35df63d066ac299e6fd0fe46d1ba
+  YandexRuntime: 2d55244d06267106cf9b00c25a1e63f72a73b6fd
+
+PODFILE CHECKSUM: b7845c4788dafa89eb58eab66e1bf82d916ac3ed
+
+COCOAPODS: 1.9.3
